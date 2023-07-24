@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4kapas</title>
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+    <main class="container">
+        <section class="section">
+            <div class="img__content">
+                <img src="./image/a1.jpg" alt="이미지" class="main__image">
+            </div>
+            <div class="text__content">
+                <p>4kapas</p>
+            </div>
+            <div class="link__box">
+                <p onclick="movePage('https://4kapas.bandcamp.com/')">bandcamp</p>
+                <p onclick="movePage('https://soundcloud.com/4kapas')">soundcloud</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        window.onload = () =>{
+            const imgEl = document.querySelector('.main__image');
+            const textContent = document.querySelector('.text__content p');
+            const randomNumber = Math.floor((Math.random() * 15))
+
+            imgEl.src = `./image/a${randomNumber + 1}.jpg`;
+
+
+            if(randomNumber === 2 || randomNumber === 11 || randomNumber === 1) textContent.style.color = '#fff';
+            if(randomNumber === 4 || randomNumber === 6 || randomNumber === 14 || randomNumber === 12) textContent.style.color = 'black';
+            if(randomNumber === 13) textContent.style.color = 'blue';
+  
+        }
+
+        const movePage = (link) => {
+            window.location.href = link ?? '/'
+        }
+
+    </script>
+</body>
+</html>
