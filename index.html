@@ -22,18 +22,32 @@
         </section>
     </main>
     <script>
-        window.onload = () =>{
+        window.onload = () => {
             const imgEl = document.querySelector('.main__image');
             const textContent = document.querySelector('.text__content p');
             const randomNumber = Math.floor((Math.random() * 15))
-
+            
+            imgEl.src ='';
             imgEl.src = `./image/a${randomNumber + 1}.jpg`;
 
+            switch (randomNumber) {
+                case 2:
+                case 11:
+                case 1:
+                    textContent.style.color = '#fff';
+                break;
 
-            if(randomNumber === 2 || randomNumber === 11 || randomNumber === 1) textContent.style.color = '#fff';
-            if(randomNumber === 4 || randomNumber === 6 || randomNumber === 14 || randomNumber === 12) textContent.style.color = 'black';
-            if(randomNumber === 13) textContent.style.color = 'blue';
-  
+                case 4:
+                case 6:
+                case 14:
+                case 12:
+                    textContent.style.color = 'black';
+                break;
+
+                case 13:
+                    textContent.style.color = 'blue';
+                break
+            }
         }
 
         const movePage = (link) => {
