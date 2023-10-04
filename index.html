@@ -12,15 +12,15 @@
             <div class="img__content">
                 <img src="./image/a1.jpg" alt="이미지" class="main__image">
             </div>
-            <div class="text__content">
+            <!-- <div class="text__content">
                 <p>4kapas</p>
-            </div>
+            </div> -->
             <div class="link__box">
                 <p onclick="movePage('https://4kapas.bandcamp.com/')">bandcamp</p>
                 <p onclick="movePage('https://soundcloud.com/4kapas')">soundcloud</p>
             </div>
             <div class="link__box" style="display: block; margin-top: 28px; text-align: center;">
-                <p style="font-weight: bold; font-size: 18px;" onclick="movePage('https://soundcloud.com/4kapas/1001a')">++천노 嘉孝 1001박++</p>
+                <p style="font-weight: bold; font-size: 18px;" onclick="movePage('https://soundcloud.com/4kapas/sets/new-tape-out-now-spiritdventure')">new tape out now [spiritdventure]</p>
             </div>
         </section>
     </main>
@@ -30,8 +30,7 @@
             const textContent = document.querySelector('.text__content p');
             const randomNumber = Math.floor((Math.random() * 15))
             
-            imgEl.src ='';
-            imgEl.src = `./image/a${randomNumber + 1}.jpg`;
+            imgEl.src = `./image/a0.jpg`;
 
             switch (randomNumber) {
                 case 2:
