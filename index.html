@@ -5,65 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>4kapas</title>
     <link rel="stylesheet" href="./css/common.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
+    <!-- 컨셉: [이팩트, 가독성, 깔끔, 귀여움]
+         포인트 컬러: [핑크, 은색, 검은색, 흰색] -->
     <main class="container">
       <section class="section">
-        <div class="img__content">
-          <img src="./image/new.jpg" alt="이미지" class="main__image" />
-        </div>
-        <!-- <div class="text__content">
-                <p>4kapas</p>
-            </div> -->
-        <div class="link__box">
-          <p onclick="movePage('https://4kapas.bandcamp.com/')">bandcamp</p>
-          <p onclick="movePage('https://soundcloud.com/4kapas')">soundcloud</p>
-          <p onclick="movePage('https://soundcloud.com/4kapas')">youtube</p>
-        </div>
-        <div
-          class="link__box"
-          style="display: block; margin-top: 28px; text-align: center"
-        >
-          <p
-            style="font-weight: bold; font-size: 18px"
-            onclick="movePage('https://soundcloud.com/4kapas/sets/new-tape-out-now-spiritdventure')"
-          >
-            new tape out now [4kapasble]
-          </p>
+        <div class="main-img-wrap reset">
+          <img src="./image/main_2.jpg" alt="" />
+
+          <div class="main-img-wrap postion-a">
+            <img src="./image/main_img_1.jpg" alt="" />
+          </div>
         </div>
       </section>
+      <!-- 메인 [사진 + 이름 + 날짜 + 장소] -->
+      <section class="section">
+        <!-- <div class="title">메인 [사진 + 이름 + 날짜 + 장소]</div> -->
+
+        <!-- <div class="main_text_wrap">
+          <p>김준수</p>
+          <p>이예나</p>
+        </div>
+        <div class="main-img-wrap">
+          <img src="./image/main_img_1.jpg" alt="" />
+        </div>
+        <div class="main_sub_text_wrap">
+          <p>2025년 1월 18일 토요일 오전 11시</p>
+          <p>여의도 켄싱턴호텔 15층 센트럴 파크 Wedding Hal.</p>
+        </div> -->
+      </section>
+      <!-- 문구 [문구only] -->
+      <section class="section">
+        <!-- <div class="title">문구 [문구only]</div> -->
+        <div class="content" style="margin-top: 100px">
+          <pre>
+            함께 있을 때 가장 나다운 모습이 되고, 
+            함께 있을 때 서로를 웃음짓게 하는 사람을 만나 
+            함께 맞는 열번째 겨울, 저희 결혼합니다. 
+
+            부부로서 나아갈 수많은 계절의 첫걸음을 
+            함께 축복해주시면 감사하겠습니다.
+          </pre>
+        </div>
+      </section>
+      <!-- 달력 -->
+      <section class="section">
+        <div class="title">달력</div>
+      </section>
+      <!-- 사진 갤러리 -->
+      <section class="section">
+        <div class="title">사진 갤러리</div>
+        <div class="grid">
+          <div class="main-img-wrap">
+            <img src="./image/main_img_1.jpg" alt="" />
+          </div>
+          <div class="main-img-wrap">
+            <img src="./image/main_img_1.jpg" alt="" />
+          </div>
+          <div class="main-img-wrap">
+            <img src="./image/main_img_1.jpg" alt="" />
+          </div>
+          <div class="main-img-wrap">
+            <img src="./image/main_img_1.jpg" alt="" />
+          </div>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="main-img-wrap">
+                <img src="./image/main_img_1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-img-wrap">
+                <img src="./image/main_img_1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-img-wrap">
+                <img src="./image/main_img_1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-img-wrap">
+                <img src="./image/main_img_1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-img-wrap">
+                <img src="./image/main_img_1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-img-wrap">
+                <img src="./image/main_img_1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main-img-wrap">
+                <img src="./image/main_img_1.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <!-- 오시는길 [약도 + 설명] -->
+      <section class="section">
+        <div class="title">오시는길 [약도 + 설명]</div>
+      </section>
+      <!-- 계좌번호 -->
+      <section class="section">
+        <div class="title">계좌번호</div>
+      </section>
     </main>
-    <script>
-      window.onload = () => {
-        const imgEl = document.querySelector(".main__image");
-        const textContent = document.querySelector(".text__content p");
-        const randomNumber = Math.floor(Math.random() * 15);
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        imgEl.src = `./image/new.jpg`;
-
-        switch (randomNumber) {
-          case 2:
-          case 11:
-          case 1:
-            textContent.style.color = "#fff";
-            break;
-
-          case 4:
-          case 6:
-          case 14:
-          case 12:
-            textContent.style.color = "black";
-            break;
-
-          case 13:
-            textContent.style.color = "blue";
-            break;
-        }
-      };
-
-      const movePage = (link) => {
-        window.location.href = link ?? "/";
-      };
+    <!-- Initialize Swiper -->
+    <script defer>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
     </script>
   </body>
 </html>
