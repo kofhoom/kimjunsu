@@ -27,7 +27,7 @@ body {
 .section .main-img-wrap {
   width: 100%;
   padding: 5px;
-  max-width: 300px;
+  max-width: 302px;
   margin: 0 auto;
 }
 
@@ -40,10 +40,11 @@ body {
 }
 .section .main-img-wrap.postion-a {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   right: 50%;
-  transform: translateX(-50%);
+
+  transform: translate(-50%, -50%);
 }
 .section .main-img-wrap img {
   width: 100%;

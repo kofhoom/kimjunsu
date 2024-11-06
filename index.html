@@ -9,10 +9,55 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <style>
+      /* Modal overlay */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      /* Swiper modal */
+      .swiper-modal {
+        position: relative;
+        width: 80%;
+        max-width: 600px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Close button */
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #000;
+        background: #fff;
+        border-radius: 50%;
+        padding: 5px;
+        z-index: 999;
+      }
+      .swiper-pagination {
+        color: #000;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    </style>
   </head>
   <body>
-    <!-- 컨셉: [이팩트, 가독성, 깔끔, 귀여움]
-         포인트 컬러: [핑크, 은색, 검은색, 흰색] -->
+    <!-- 컨셉: [이팩트, 가독성, 깔끔, 귀여움] -->
+    <!-- 포인트 컬러: [핑크, 은색, 검은색, 흰색] -->
     <main class="container">
       <section class="section">
         <div class="main-img-wrap reset">
@@ -23,25 +68,8 @@
           </div>
         </div>
       </section>
-      <!-- 메인 [사진 + 이름 + 날짜 + 장소] -->
+      <!-- Main [Photo + Name + Date + Venue] -->
       <section class="section">
-        <!-- <div class="title">메인 [사진 + 이름 + 날짜 + 장소]</div> -->
-
-        <!-- <div class="main_text_wrap">
-          <p>김준수</p>
-          <p>이예나</p>
-        </div>
-        <div class="main-img-wrap">
-          <img src="./image/main_img_1.jpg" alt="" />
-        </div>
-        <div class="main_sub_text_wrap">
-          <p>2025년 1월 18일 토요일 오전 11시</p>
-          <p>여의도 켄싱턴호텔 15층 센트럴 파크 Wedding Hal.</p>
-        </div> -->
-      </section>
-      <!-- 문구 [문구only] -->
-      <section class="section">
-        <!-- <div class="title">문구 [문구only]</div> -->
         <div class="content" style="margin-top: 100px">
           <pre>
             함께 있을 때 가장 나다운 모습이 되고, 
@@ -53,85 +81,83 @@
           </pre>
         </div>
       </section>
-      <!-- 달력 -->
+
+      <!-- Calendar Section -->
       <section class="section">
         <div class="title">달력</div>
       </section>
-      <!-- 사진 갤러리 -->
+
+      <!-- Photo Gallery Section -->
       <section class="section">
         <div class="title">사진 갤러리</div>
         <div class="grid">
           <div class="main-img-wrap">
-            <img src="./image/main_img_1.jpg" alt="" />
+            <img src="./image/main_img_1.jpg" alt="" class="gallery-image" />
           </div>
           <div class="main-img-wrap">
-            <img src="./image/main_img_1.jpg" alt="" />
+            <img src="./image/main_img_1.jpg" alt="" class="gallery-image" />
           </div>
           <div class="main-img-wrap">
-            <img src="./image/main_img_1.jpg" alt="" />
+            <img src="./image/main_img_1.jpg" alt="" class="gallery-image" />
           </div>
           <div class="main-img-wrap">
-            <img src="./image/main_img_1.jpg" alt="" />
+            <img src="./image/main_img_1.jpg" alt="" class="gallery-image" />
           </div>
-        </div>
-        <!-- Swiper -->
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="main-img-wrap">
-                <img src="./image/main_img_1.jpg" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="main-img-wrap">
-                <img src="./image/main_img_1.jpg" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="main-img-wrap">
-                <img src="./image/main_img_1.jpg" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="main-img-wrap">
-                <img src="./image/main_img_1.jpg" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="main-img-wrap">
-                <img src="./image/main_img_1.jpg" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="main-img-wrap">
-                <img src="./image/main_img_1.jpg" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="main-img-wrap">
-                <img src="./image/main_img_1.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
         </div>
       </section>
-      <!-- 오시는길 [약도 + 설명] -->
+
+      <!-- Modal for Swiper -->
+      <div class="modal-overlay">
+        <div class="swiper-modal">
+          <span class="close-btn">&times;</span>
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="main-img-wrap">
+                  <img src="./image/main_img_1.jpg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="main-img-wrap">
+                  <img src="./image/main_img_1.jpg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="main-img-wrap">
+                  <img src="./image/main_img_1.jpg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="main-img-wrap">
+                  <img src="./image/main_img_1.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Directions Section -->
       <section class="section">
         <div class="title">오시는길 [약도 + 설명]</div>
       </section>
-      <!-- 계좌번호 -->
+
+      <!-- Account Information Section -->
       <section class="section">
         <div class="title">계좌번호</div>
       </section>
     </main>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
+    <!-- Initialize Swiper and Modal -->
     <script defer>
+      // Swiper configuration
       var swiper = new Swiper(".mySwiper", {
         pagination: {
           el: ".swiper-pagination",
@@ -141,6 +167,30 @@
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+      });
+
+      // Modal functionality
+      const modalOverlay = document.querySelector(".modal-overlay");
+      const galleryImages = document.querySelectorAll(".gallery-image");
+      const closeBtn = document.querySelector(".close-btn");
+
+      // Show modal when clicking on gallery image
+      galleryImages.forEach((img) => {
+        img.addEventListener("click", () => {
+          modalOverlay.style.display = "flex";
+        });
+      });
+
+      // Hide modal when clicking the close button
+      closeBtn.addEventListener("click", () => {
+        modalOverlay.style.display = "none";
+      });
+
+      // Hide modal when clicking outside of swiper
+      modalOverlay.addEventListener("click", (e) => {
+        if (e.target === modalOverlay) {
+          modalOverlay.style.display = "none";
+        }
       });
     </script>
   </body>
