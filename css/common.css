@@ -7,17 +7,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "OldLondonDB";
+  font-family: monospace;
 }
 html,
 body {
   width: 100%;
   height: 100%;
 }
-
+.title {
+  text-align: center;
+}
+/* #f4cce0 */
 .container {
   width: 100%;
   height: 100%;
+}
+.mt37 {
+  margin-top: 37px;
 }
 .section {
   width: 100%;
@@ -46,6 +52,23 @@ body {
 
   transform: translate(-50%, -50%);
 }
+.sub_img_wrap {
+  width: 100%;
+  text-align: center;
+}
+.flower_img {
+  margin: 0 auto;
+
+  width: 30px;
+}
+.left {
+  position: relative;
+  left: -14px;
+}
+.reverse {
+  transform: scale(-1, 1);
+  margin-bottom: 37px;
+}
 .section .main-img-wrap img {
   width: 100%;
 }
@@ -58,7 +81,10 @@ body {
   width: 100%;
   height: 100%;
 }
-
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
 .swiper-slide {
   text-align: center;
   font-size: 18px;
