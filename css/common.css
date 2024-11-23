@@ -229,7 +229,7 @@ a {
 }
 
 .right_box .kakao_btn {
-  background-image: url(/image/pay.png);
+  background-image: url("/image/pay.png");
   background-position: center;
   background-size: 75%;
   background-color: #f9eb37;
