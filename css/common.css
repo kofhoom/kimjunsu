@@ -23,14 +23,18 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-
+.full_h {
+  height: 100dvh !important;
+  display: flex;
+  align-items: center;
+}
 .title {
   text-align: left;
   font-size: 16.875px;
   margin-bottom: 20px;
-  color: rgb(207, 143, 150);
+  color: #f4cce0;
   font-weight: 600;
-  display: none;
+  text-align: center;
 }
 /* #f4cce0 */
 .container {
@@ -229,7 +233,7 @@ a {
 }
 
 .right_box .kakao_btn {
-  background-image: url("/image/pay.png");
+  background-image: url(../image/pay.png);
   background-position: center;
   background-size: 75%;
   background-color: #f9eb37;

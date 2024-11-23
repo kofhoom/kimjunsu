@@ -41,6 +41,7 @@
         top: 10px;
         right: 10px;
         font-size: 24px;
+
         cursor: pointer;
         color: #000;
         background: #fff;
@@ -64,7 +65,7 @@
     <!-- 컨셉: [이팩트, 가독성, 깔끔, 귀여움] -->
     <!-- 포인트 컬러: [핑크, 은색, 검은색, 흰색] -->
     <main class="container">
-      <section class="section">
+      <section class="section full_h">
         <div class="main-img-wrap reset">
           <img src="./image/main_3.png" alt="" />
 
@@ -132,7 +133,6 @@
 
       <!-- Calendar Section -->
       <section class="section">
-        <div class="title" style="display: none">달력</div>
         <div class="main-img-wrap reset">
           <img src="./image/calendar.png" alt="" />
         </div>
@@ -147,7 +147,6 @@
             style="width: 122px; margin: 0 auto 63px"
           />
         </div>
-        <div class="title">사진 갤러리</div>
         <div class="grid">
           <div class="main-img-wrap">
             <img src="./image/1.jpg" alt="" class="gallery-image" />
@@ -359,12 +358,11 @@
           <img
             src="./image/heart2.png"
             alt=""
-            style="width: 128px; margin: 0 auto 12px"
+            style="width: 122px; margin: 0 auto 63px"
           />
         </div>
-
+        <div class="title">오시는 길</div>
         <div id="map" style="height: 300px; margin-bottom: 25px"></div>
-        <div class="title">찾아오시는 길</div>
         <div class="text_areas line_height_17">
           <p>[자동차]</p>
           <p>서울특별시 영등포구 국회대로76길 16 여의도 켄싱턴호텔</p>
@@ -388,14 +386,21 @@
 
       <!-- Account Information Section -->
       <section class="section last">
-        <div class="title">계좌번호</div>
+        <div class="sub_img_wrap">
+          <img
+            src="./image/heart.png"
+            alt=""
+            style="width: 24px; margin: 0 auto 10px"
+          />
+        </div>
+        <div class="title">마음 전하실 곳</div>
         <div class="account col_couple_name" var="account">
           <div
             class="account_wrap groom aos-init aos-animate"
             aos=""
             data-aos="fade-up"
           >
-            <div class="account_box">
+            <div class="account_box" style="color: #5f8b9b;">
               신랑측
               <i class="xi-angle-down"></i>
             </div>
@@ -411,7 +416,7 @@
                 />
                 <div class="left_box">
                   <div>
-                    <h4>신랑</h4>
+                    <h4  style="color: #5f8b9b;">신랑</h4>
                     <span class="holder" var="groomBankHolder">김준수</span>
                   </div>
                   <div style="display: flex">
@@ -450,7 +455,7 @@
                 />
                 <div class="left_box">
                   <div>
-                    <h4>신랑 <span var="brideDadText">아버지</span></h4>
+                    <h4  style="color: #5f8b9b;">신랑 <span var="brideDadText">아버지</span></h4>
                     <span class="holder" var="brideDadBankHolder">김종은</span>
                   </div>
                   <div style="display: flex">
@@ -482,7 +487,7 @@
                 />
                 <div class="left_box">
                   <div>
-                    <h4>신랑 <span var="brideMomText">어머니</span></h4>
+                    <h4  style="color: #5f8b9b;">신랑 <span var="brideMomText">어머니</span></h4>
                     <span class="holder" var="brideMomBankHolder">권영애</span>
                   </div>
                   <div style="display: flex">
@@ -511,7 +516,7 @@
             aos=""
             data-aos="fade-up"
           >
-            <div class="account_box bride_account">
+            <div class="account_box bride_account" style="color: #f4cce0;">
               신부측
               <i class="xi-angle-down"></i>
             </div>
@@ -527,7 +532,7 @@
                 />
                 <div class="left_box">
                   <div>
-                  <h4>신부</h4>
+                  <h4 style="color: #f4cce0;">신부</h4>
                   <span class="holder" var="brideBankHolder">이예나</span>
                 </div>
                 <div style="display: flex">
@@ -564,8 +569,8 @@
                   maxlength="254"
                 />
                 <div class="left_box">
-                  <div>
-                  <h4>신부 <span var="brideDadText">아버지</span></h4>
+                  <div >
+                  <h4 style="color: #f4cce0;">신부 <span var="brideDadText">아버지</span></h4>
                   <span class="holder" var="brideDadBankHolder">이정엽</span>
                 </div>
                 <div style="display: flex">
@@ -597,8 +602,8 @@
                   maxlength="254"
                 />
                 <div class="left_box">
-                  <div>
-                  <h4>신부 <span var="brideMomText">어머니</span></h4>
+                  <div >
+                  <h4 style="color: #f4cce0;">신부 <span var="brideMomText">어머니</span></h4>
                   <span class="holder" var="brideMomBankHolder">김혜숙</span>
                 </div>
                 <div style="display: flex">
