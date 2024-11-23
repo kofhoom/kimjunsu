@@ -363,7 +363,7 @@
           />
         </div>
 
-        <div id="map" style="height: 400px; margin-bottom: 25px"></div>
+        <div id="map" style="height: 300px; margin-bottom: 25px"></div>
         <div class="title">찾아오시는 길</div>
         <div class="text_areas line_height_17">
           <p>[자동차]</p>
@@ -395,11 +395,11 @@
             aos=""
             data-aos="fade-up"
           >
-            <div class="account_box active">
+            <div class="account_box">
               신랑측
               <i class="xi-angle-down"></i>
             </div>
-            <ul class="account_list" style="display: block">
+            <ul class="account_list" style="display: none">
               <li var="isGroomBank">
                 <input
                   type="text"
@@ -410,11 +410,17 @@
                   maxlength="254"
                 />
                 <div class="left_box">
-                  <h4>신랑</h4>
-                  <div class="acc_num" var="groomBankAcc">1004-249-170333</div>
-                  <div class="acc_name">
-                    <span class="bank" var="groomBankName">우리응해</span>
+                  <div>
+                    <h4>신랑</h4>
                     <span class="holder" var="groomBankHolder">김준수</span>
+                  </div>
+                  <div style="display: flex">
+                    <div class="acc_num" var="groomBankAcc">
+                      1004-249-170333
+                    </div>
+                    <div class="acc_name">
+                      <span class="bank" var="groomBankName">우리은행</span>
+                    </div>
                   </div>
                 </div>
                 <div class="right_box">
@@ -426,12 +432,77 @@
                   >
                   <a
                     var="groomBankKakaopay_"
-                    href="https://salondeletter.com/w/8xc7zg0beb"
+                    href="https://qr.kakaopay.com/FJr4NUyTo"
                     target="_blank"
                     class="s_btn kakao_btn"
                     >PAY</a
                   >
                 </div>
+              </li>
+              <li var="isBrideDadBank">
+                <input
+                  type="text"
+                  class="account"
+                  value="018-21-0694-222"
+                  style="display: none"
+                  var="brideDadBankAcc"
+                  maxlength="254"
+                />
+                <div class="left_box">
+                  <div>
+                    <h4>신랑 <span var="brideDadText">아버지</span></h4>
+                    <span class="holder" var="brideDadBankHolder">김종은</span>
+                  </div>
+                  <div style="display: flex">
+                    <div class="acc_num" var="brideDadBankAcc">
+                      018-21-0694-222
+                    </div>
+                    <div class="acc_name">
+                      <span class="bank" var="brideDadBankName">국민은행</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="right_box">
+                  <a
+                    href="javascript:;"
+                    class="s_btn"
+                    onclick="wedding.copyBank(this)"
+                    >복사</a
+                  >
+                </div>
+              </li>
+              <li var="isBrideMomBank">
+                <input
+                  type="text"
+                  class="account"
+                  value="854-21-0214-054"
+                  style="display: none"
+                  var="brideMomBankAcc"
+                  maxlength="254"
+                />
+                <div class="left_box">
+                  <div>
+                    <h4>신랑 <span var="brideMomText">어머니</span></h4>
+                    <span class="holder" var="brideMomBankHolder">권영애</span>
+                  </div>
+                  <div style="display: flex">
+                  <div class="acc_num" var="brideMomBankAcc">
+                    854-21-0214-054
+                  </div>
+                  <div class="acc_name">
+                    <span class="bank" var="brideMomBankName">국민은행</span>
+                  </div>
+                  </div>
+                </div>
+                <div class="right_box">
+                  <a
+                    href="javascript:;"
+                    class="s_btn"
+                    onclick="wedding.copyBank(this)"
+                    >복사</a
+                  >
+                </div>
+              </div>
               </li>
             </ul>
           </div>
@@ -444,7 +515,7 @@
               신부측
               <i class="xi-angle-down"></i>
             </div>
-            <ul class="account_list">
+            <ul class="account_list" style="display: none">
               <li var="isBrideBank">
                 <input
                   type="text"
@@ -455,13 +526,18 @@
                   maxlength="254"
                 />
                 <div class="left_box">
+                  <div>
                   <h4>신부</h4>
+                  <span class="holder" var="brideBankHolder">이예나</span>
+                </div>
+                <div style="display: flex">
                   <div class="acc_num" var="brideBankAcc">33313-961-841</div>
                   <div class="acc_name">
                     <span class="bank" var="brideBankName">카카오뱅크</span>
-                    <span class="holder" var="brideBankHolder">이예나</span>
                   </div>
                 </div>
+              </div>
+
                 <div class="right_box">
                   <a
                     href="javascript:;"
@@ -488,14 +564,18 @@
                   maxlength="254"
                 />
                 <div class="left_box">
+                  <div>
                   <h4>신부 <span var="brideDadText">아버지</span></h4>
+                  <span class="holder" var="brideDadBankHolder">이정엽</span>
+                </div>
+                <div style="display: flex">
                   <div class="acc_num" var="brideDadBankAcc">
                     018-21-0694-222
                   </div>
                   <div class="acc_name">
                     <span class="bank" var="brideDadBankName">국민은행</span>
-                    <span class="holder" var="brideDadBankHolder">신민재</span>
                   </div>
+                </div>
                 </div>
                 <div class="right_box">
                   <a
@@ -505,6 +585,7 @@
                     >복사</a
                   >
                 </div>
+                
               </li>
               <li var="isBrideMomBank">
                 <input
@@ -516,14 +597,18 @@
                   maxlength="254"
                 />
                 <div class="left_box">
+                  <div>
                   <h4>신부 <span var="brideMomText">어머니</span></h4>
+                  <span class="holder" var="brideMomBankHolder">김혜숙</span>
+                </div>
+                <div style="display: flex">
                   <div class="acc_num" var="brideMomBankAcc">
                     854-21-0214-054
                   </div>
                   <div class="acc_name">
                     <span class="bank" var="brideMomBankName">국민은행</span>
-                    <span class="holder" var="brideMomBankHolder">장연희</span>
                   </div>
+                </div>
                 </div>
                 <div class="right_box">
                   <a
@@ -604,6 +689,34 @@
           }
         }
       );
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Account box toggle
+        document.querySelectorAll(".account_box").forEach((box) => {
+          box.addEventListener("click", function () {
+            const accountList = this.nextElementSibling; // 다음 형제 요소 (.account_list)
+            accountList.style.display =
+              accountList.style.display === "none" ||
+              accountList.style.display === ""
+                ? "block"
+                : "none";
+          });
+        });
+
+        // Copy functionality
+        window.wedding = {
+          copyBank: function (el) {
+            const accNumElement = el.closest("li").querySelector(".acc_num");
+            const accNum = accNumElement.textContent.trim();
+
+            // Copy to clipboard
+            navigator.clipboard
+              .writeText(accNum)
+              .then(() => alert(`계좌번호가 복사되었습니다.`))
+              .catch((err) => alert("복사 실패: " + err));
+          },
+        };
+      });
     </script>
   </body>
 </html>
