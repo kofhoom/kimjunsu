@@ -222,6 +222,7 @@ a {
 .right_box {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 .right_box .s_btn {
   font-size: 0.8rem;
@@ -234,9 +235,9 @@ a {
   text-decoration: none;
   /* margin-left: 10px; */
 }
-.right_box .s_btn:hover {
+/* .right_box .s_btn:hover {
   text-decoration: underline;
-}
+} */
 
 .right_box .kakao_btn {
   background-image: url(../image/pay.png);
