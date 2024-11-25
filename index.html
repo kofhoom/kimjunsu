@@ -882,12 +882,18 @@
 
     // 부드러운 스크롤 함수
     function smoothScrollToTop() {
-      let currentScroll = window.scrollY;
-      if (currentScroll > 0) {
-        window.requestAnimationFrame(smoothScrollToTop);
-        window.scrollTo(0, 0);
-      }
+  const scrollDuration = 500; // 스크롤 지속 시간 (밀리초)
+  const scrollHeight = window.scrollY;
+  const scrollStep = scrollHeight / (scrollDuration / 16); // 16ms = 1 frame (대략 60fps)
+
+  const scrollInterval = setInterval(() => {
+    if (window.scrollY > 0) {
+      window.scrollBy(0, -scrollStep); // 한 번에 scrollStep만큼 위로 이동
+    } else {
+      clearInterval(scrollInterval); // 스크롤이 완료되면 정지
     }
+  }, 16); // 16ms마다 실행
+}
 
     // Top 버튼 클릭 이벤트
     topButton.addEventListener("click", () => {
