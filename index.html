@@ -1,7 +1,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, viewport-fit=cover, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex,nofollow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kofhoom.github.io/kimjunsu/">
+    <meta property="og:title" content="준수 ♡ 예나 결혼합니다.">
+    <meta property="og:image" content="https://kofhoom.github.io/kimjunsu/image/main_img_1.jpg">
+    <meta property="og:description" content="2025년 1월 18일 토요일 오전 11시">
+    <meta property="og:site_name" content="준수 ♡ 예나 결혼합니다.">
+    <meta property="og:locale" content="ko_KR">
     <title>김준수 ♡ 이예나 결혼합니다.</title>
     <link rel="stylesheet" href="./css/common.css" />
     <link
@@ -62,9 +72,19 @@
     </style>
   </head>
   <body>
+        <!-- Header Section -->
+
     <!-- 컨셉: [이팩트, 가독성, 깔끔, 귀여움] -->
     <!-- 포인트 컬러: [핑크, 은색, 검은색, 흰색] -->
     <main class="container">
+      <header class="header">
+        <div class="header_name row_couple_name">
+          <img src="./image/junsuy.png" alt="" style="height: 21px;">
+      </div>
+        <div class="music-controls">
+          <button id="volume-btn" class="volume-button">🔊</button>
+        </div>
+      </header>
       <section class="section full_h">
         <div class="main-img-wrap reset">
           <img src="./image/main_3.png" alt="" style="max-width: initial;"/>
@@ -493,7 +513,7 @@
                   </div>
                   <div style="display: flex">
                     <div class="acc_num" var="brideDadBankAcc">
-                      174210029178
+                      174-21-0029-178
                     </div>
                     <div class="acc_name">
                       <span class="bank" var="brideDadBankName">국민은행</span>
@@ -530,7 +550,7 @@
                   </div>
                   <div style="display: flex">
                   <div class="acc_num" var="brideMomBankAcc">
-                    106802000784
+                    1068-02-000-784
                   </div>
                   <div class="acc_name">
                     <span class="bank" var="brideMomBankName">농협은행</span>
@@ -559,7 +579,7 @@
             aos=""
             data-aos="fade-up"
           >
-            <div class="account_box bride_account" style="color: #f6c2e2;">
+            <div class="account_box bride_account" style="color: #f7b3dd;">
               신부측
               <img src="./image/heart.png" alt="" style="    height: 20px;">
             </div>
@@ -575,7 +595,7 @@
                 />
                 <div class="left_box">
                   <div>
-                  <h4 style="color: #f6c2e2;">신부</h4>
+                  <h4 style="color: #f7b3dd;">신부</h4>
                   <span class="holder" var="brideBankHolder">이예나</span>
                 </div>
                 <div style="display: flex">
@@ -619,7 +639,7 @@
                 />
                 <div class="left_box">
                   <div >
-                  <h4 style="color: #f6c2e2;">신부 <span var="brideDadText">아버지</span></h4>
+                  <h4 style="color: #f7b3dd;">신부 <span var="brideDadText">아버지</span></h4>
                   <span class="holder" var="brideDadBankHolder">이정엽</span>
                 </div>
                 <div style="display: flex">
@@ -657,7 +677,7 @@
                 />
                 <div class="left_box">
                   <div >
-                  <h4 style="color: #f6c2e2;">신부 <span var="brideMomText">어머니</span></h4>
+                  <h4 style="color: #f7b3dd;">신부 <span var="brideMomText">어머니</span></h4>
                   <span class="holder" var="brideMomBankHolder">김혜숙</span>
                 </div>
                 <div style="display: flex">
@@ -687,8 +707,21 @@
           </div>
         </div>
       </section>
-    </main>
 
+    </main>
+    <footer class="footer" style="border: 1px solid #e9e9e9;">
+      <div class="footer-content">
+        <div >
+          <img src="./image/kitty.png" alt="" style="    height: 57px;
+          margin-bottom: 10px;">
+        </div>
+        <p style="font-size: 11.6px;">김준수 ♡ 이예나 결혼식 - 모두의 사랑 속에</p>
+        <p style="font-size: 11.6px;">Copyright © 2025 junsu & yeana</p>
+        <!-- <p>문의: <a href="mailto:wedding@example.com">wedding@example.com</a></p> -->
+      </div>
+    </footer>
+    <!-- Top 버튼 -->
+<button id="top-btn" class="top-button">▲</button>
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0f774301663c4292c86c39ef1a23b00f&libraries=services"
@@ -786,6 +819,80 @@
         };
       });
     </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector(".header");
+    let lastScrollY = window.scrollY;
+    // Scroll event to show header and start music
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        header.classList.add("visible");
+      } else {
+        header.classList.remove("visible");
+      }
+      lastScrollY = window.scrollY;
+    });
+
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const audio = new Audio("./ZionTV.mp3");
+  audio.loop = true; // 반복 재생
+  audio.volume = 0.5; // 기본 볼륨 (소리 켜짐 상태)
+  let isMuted = false; // 음소거 상태를 추적
+
+  const volumeBtn = document.getElementById("volume-btn");
+
+  // 페이지 로드 시 자동 재생 시도
+  audio.play()
+    .then(() => {
+      console.log("음악 재생 시작");
+    })
+    .catch((err) => {
+      console.log("Autoplay failed:", err);
+    });
+
+  // 볼륨 버튼 클릭 이벤트
+  volumeBtn.addEventListener("click", () => {
+    if (isMuted) {
+      audio.volume = 0.5; // 음소거 해제
+      volumeBtn.textContent = "🔊"; // 스피커 아이콘
+    } else {
+      audio.volume = 0; // 음소거
+      volumeBtn.textContent = "🔈"; // 음소거 아이콘
+    }
+    isMuted = !isMuted; // 상태 반전
+  });
+});
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const topButton = document.getElementById("top-btn");
+
+    // 스크롤 이벤트
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        topButton.style.display = "flex";
+      } else {
+        topButton.style.display = "none";
+      }
+    });
+
+    // 부드러운 스크롤 함수
+    function smoothScrollToTop() {
+      let currentScroll = window.scrollY;
+      if (currentScroll > 0) {
+        window.requestAnimationFrame(smoothScrollToTop);
+        window.scrollTo(0, currentScroll - currentScroll / 8);
+      }
+    }
+
+    // Top 버튼 클릭 이벤트
+    topButton.addEventListener("click", () => {
+      smoothScrollToTop();
+    });
+  });
+</script>
 
   </body>
 </html>
