@@ -112,7 +112,7 @@
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section hidden">
         <div
           class="text_areas line_heigh1 text_align_center"
           style="
@@ -131,7 +131,7 @@
         </div>
       </section>
       <!-- Main [Photo + Name + Date + Venue] -->
-      <section class="section">
+      <section class="section hidden">
         <div class="content" style="margin-top: 30px">
           <div class="sub_img_wrap">
             <img src="./image/flower.png" alt="" class="flower_img left" />
@@ -159,7 +159,11 @@
           </div>
         </div>
       </section>
-      <section class="section3 aos-init aos-animate" aos="" data-aos="fade-up">
+      <section
+        class="section section3 aos-init aos-animate hidden"
+        aos=""
+        data-aos="fade-up"
+      >
         <div class="tel_wrap2">
           <div class="img_con row_couple_name">
             <div class="img_box">
@@ -306,14 +310,14 @@
         </div>
       </section>
       <!-- Calendar Section -->
-      <section class="section" id="calendar">
+      <section class="section hidden" id="calendar">
         <div class="main-img-wrap reset">
           <img src="./image/calendar.png" alt="" />
         </div>
       </section>
 
       <!-- Photo Gallery Section -->
-      <section class="section">
+      <section class="section hidden">
         <div class="sub_img_wrap" style="display: block">
           <img
             src="./image/rose2.png"
@@ -484,7 +488,7 @@
       </div>
 
       <!-- Directions Section -->
-      <section class="section last">
+      <section class="section last hidden">
         <div class="sub_img_wrap">
           <img
             src="./image/heart2.png"
@@ -515,7 +519,7 @@
       </section>
 
       <!-- Account Information Section -->
-      <section class="section last">
+      <section class="section last hidden">
         <div class="sub_img_wrap">
           <img
             src="./image/heart.png"
@@ -562,12 +566,7 @@
                   <a href="tel:010-3073-9118" class="s_btn"
                     ><span style="filter: brightness(0)">&#128222;</span></a
                   >
-                  <a
-                    href="javascript:;"
-                    class="s_btn"
-                    onclick="wedding.copyBank(this)"
-                    >복사</a
-                  >
+                  <a class="s_btn">복사</a>
                   <a
                     var="groomBankKakaopay_"
                     href="https://qr.kakaopay.com/FJr4NUyTo"
@@ -606,12 +605,7 @@
                   <a href="tel:010-7399-9118" class="s_btn"
                     ><span style="filter: brightness(0)">&#128222;</span></a
                   >
-                  <a
-                    href="javascript:;"
-                    class="s_btn"
-                    onclick="wedding.copyBank(this)"
-                    >복사</a
-                  >
+                  <a class="s_btn">복사</a>
                 </div>
               </li>
               <li var="isBrideMomBank">
@@ -643,12 +637,7 @@
                   <a href="tel:010-7508-9118" class="s_btn"
                     ><span style="filter: brightness(0)">&#128222;</span></a
                   >
-                  <a
-                    href="javascript:;"
-                    class="s_btn"
-                    onclick="wedding.copyBank(this)"
-                    >복사</a
-                  >
+                  <a class="s_btn">복사</a>
                 </div>
               </li>
             </ul>
@@ -689,12 +678,7 @@
                   <a href="tel:010-2579-9653" class="s_btn"
                     ><span style="filter: brightness(0)">&#128222;</span></a
                   >
-                  <a
-                    href="javascript:;"
-                    class="s_btn"
-                    onclick="wedding.copyBank(this)"
-                    >복사</a
-                  >
+                  <a class="s_btn">복사</a>
                   <a
                     var="brideBankKakaopay_"
                     href="https://qr.kakaopay.com/FE1lHL04X"
@@ -733,12 +717,7 @@
                   <a href="tel:010-2281-9653" class="s_btn"
                     ><span style="filter: brightness(0)">&#128222;</span></a
                   >
-                  <a
-                    href="javascript:;"
-                    class="s_btn"
-                    onclick="wedding.copyBank(this)"
-                    >복사</a
-                  >
+                  <a class="s_btn">복사</a>
                 </div>
               </li>
               <li var="isBrideMomBank">
@@ -770,12 +749,7 @@
                   <a href="tel:010-6287-9653" class="s_btn"
                     ><span style="filter: brightness(0)">&#128222;</span></a
                   >
-                  <a
-                    href="javascript:;"
-                    class="s_btn"
-                    onclick="wedding.copyBank(this)"
-                    >복사</a
-                  >
+                  <a class="s_btn">복사</a>
                 </div>
               </li>
             </ul>
@@ -806,184 +780,7 @@
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0f774301663c4292c86c39ef1a23b00f&libraries=services"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script defer="">
-      var swiper = new Swiper(".mySwiper", {
-        scrollbar: {
-          el: ".swiper-scrollbar",
-          hide: true,
-        },
-        initialSlide: 0,
-      });
-
-      const modalOverlay = document.querySelector(".modal-overlay");
-      const galleryImages = document.querySelectorAll(".gallery-image");
-      const closeBtn = document.querySelector(".close-btn");
-
-      galleryImages.forEach((img, index) => {
-        img.addEventListener("click", () => {
-          swiper.slideTo(index);
-          modalOverlay.style.display = "flex";
-        });
-      });
-
-      closeBtn.addEventListener("click", () => {
-        modalOverlay.style.display = "none";
-      });
-
-      modalOverlay.addEventListener("click", (e) => {
-        if (e.target === modalOverlay) {
-          modalOverlay.style.display = "none";
-        }
-      });
-    </script>
-    <script>
-      var container = document.getElementById("map");
-      var options = {
-        center: new kakao.maps.LatLng(33.450701, 126.570667),
-        level: 3,
-      };
-
-      var map = new kakao.maps.Map(container, options);
-
-      var geocoder = new kakao.maps.services.Geocoder();
-
-      geocoder.addressSearch(
-        "서울특별시 영등포구 국회대로76길 16",
-        function (result, status) {
-          if (status === kakao.maps.services.Status.OK) {
-            var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-
-            var marker = new kakao.maps.Marker({
-              map: map,
-              position: coords,
-            });
-
-            var infowindow = new kakao.maps.InfoWindow({
-              content:
-                '<div style="width:150px;text-align:center;padding:6px 0;">여의도 켄싱턴호텔</div>',
-            });
-
-            map.setCenter(coords);
-          }
-        }
-      );
-
-      document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll(".account_box").forEach((box) => {
-          box.addEventListener("click", function () {
-            const accountList = this.nextElementSibling;
-            event.target.children[0].classList.toggle("active");
-
-            accountList.style.display =
-              accountList.style.display === "none" ||
-              accountList.style.display === ""
-                ? "block"
-                : "none";
-          });
-        });
-
-        // Copy functionality
-        window.wedding = {
-          copyBank: function (el) {
-            const accNumElement = el.closest("li").querySelector(".acc_num");
-            const accNum = accNumElement.textContent.trim();
-
-            // Copy to clipboard
-            navigator.clipboard
-              .writeText(accNum)
-              .then(() => alert(`계좌번호가 복사되었습니다.`))
-              .catch((err) => alert("복사 실패: " + err));
-          },
-        };
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const header = document.querySelector(".header");
-        let lastScrollY = window.scrollY;
-        // Scroll event to show header and start music
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 100) {
-            header.classList.add("visible");
-          } else {
-            header.classList.remove("visible");
-          }
-          lastScrollY = window.scrollY;
-        });
-      });
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const audio = new Audio("./ZionTV.mp3");
-        audio.loop = true; // 반복 재생
-        audio.volume = 0.5; // 기본 볼륨 (소리 켜짐 상태)
-        let isMuted = false; // 음소거 상태를 추적
-
-        const volumeBtn = document.getElementById("volume-btn");
-
-        // 페이지 로드 시 자동 재생 시도
-        audio
-          .play()
-          .then(() => {
-            console.log("음악 재생 시작");
-          })
-          .catch((err) => {
-            console.log("Autoplay failed:", err);
-          });
-
-        // 볼륨 버튼 클릭 이벤트
-        volumeBtn.addEventListener("click", () => {
-          if (isMuted) {
-            audio.play();
-            audio.volume = 0.5; // 음소거 해제
-            volumeBtn.textContent = "🔊"; // 스피커 아이콘
-          } else {
-            audio.volume = 0; // 음소거
-            audio.pause();
-            volumeBtn.textContent = "🔈"; // 음소거 아이콘
-          }
-          isMuted = !isMuted; // 상태 반전
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const topButton = document.getElementById("top-btn");
-
-        // 스크롤 이벤트
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 200) {
-            topButton.style.display = "flex";
-          } else {
-            topButton.style.display = "none";
-          }
-        });
-
-        // 부드러운 스크롤 함수
-        function smoothScrollToTop() {
-          const scrollDuration = 100; // 스크롤 지속 시간 (밀리초)
-          const scrollHeight = window.scrollY;
-          const scrollStep = scrollHeight / (scrollDuration / 16); // 16ms = 1 frame (대략 60fps)
-
-          const scrollInterval = setInterval(() => {
-            if (window.scrollY > 0) {
-              window.scrollBy(0, -scrollStep); // 한 번에 scrollStep만큼 위로 이동
-            } else {
-              clearInterval(scrollInterval); // 스크롤이 완료되면 정지
-            }
-          }, 16); // 16ms마다 실행
-        }
-
-        // Top 버튼 클릭 이벤트
-        topButton.addEventListener("click", function () {
-          // window.scrollTo(0, 0); left and top
-
-          window.scrollTo({
-            left: 0,
-            top: 0,
-            behavior: "smooth",
-          });
-        });
-      });
-    </script>
+    <script src="./js/common.js" defer></script>
+    <script src="./js/scrollReveal.js" defer></script>
   </body>
 </html>

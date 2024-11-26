@@ -313,7 +313,7 @@ a {
   margin: 0 auto 50px;
 }
 
-.section3 {
+.section.section3 {
   background-color: #f9f9f9; /* Light background */
   padding: 20px;
   border-radius: 8px;
@@ -506,7 +506,16 @@ a {
   );
   animation: fall 2s linear infinite;
 }
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 @keyframes fall {
   0% {
     transform: translateY(0) scale(1);
