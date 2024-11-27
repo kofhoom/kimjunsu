@@ -103,7 +103,7 @@ class WeddingPage {
   }
 
   initializeCopyFunctionality() {
-    const copyButtons = document.querySelectorAll(".s_btn");
+    const copyButtons = document.querySelectorAll(".s_btn.copy");
     copyButtons.forEach((button) => {
       button.addEventListener("click", (event) => {
         const accountNumberElement = button

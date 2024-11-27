@@ -1,8 +1,16 @@
 @font-face {
-  font-family: "GowunDodum-Regular";
-  src: url("https://cdn.salondeletter.com/cdn/font/GowunDodum-Regular.woff")
+  font-family: "DOSGothic";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff")
     format("woff");
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -10,7 +18,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "GowunDodum-Regular";
+  font-family: "Pretendard-Regular";
 }
 html,
 body {
@@ -113,7 +121,7 @@ a {
 }
 
 .section .main-img-wrap.reset > img {
-  max-width: 321px;
+  /* max-width: 321px; */
   width: 100%;
   margin: 0 auto;
 }
