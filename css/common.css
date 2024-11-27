@@ -99,6 +99,9 @@ a {
 .mt37 {
   margin-top: 37px;
 }
+.mb37 {
+  margin-bottom: 37px;
+}
 .section {
   width: 100%;
   height: auto;
@@ -520,7 +523,18 @@ a {
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+.hidden_main {
+  opacity: 0;
+  transform: translateY(-150px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
 .visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dfjs {
   opacity: 1;
   transform: translateY(0);
 }

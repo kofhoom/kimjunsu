@@ -20,7 +20,11 @@ class ScrollReveal {
   revealSection(entries, observer) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
+        if (entries[0]) {
+          entries[0].target.classList.add("dfjs");
+        } else {
+          entry.target.classList.add("visible");
+        }
         observer.unobserve(entry.target); // Once revealed, stop observing
       }
     });
