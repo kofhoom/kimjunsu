@@ -5,11 +5,12 @@ class WeddingPage {
 
     this.initializeHeader();
     this.initializeGallery();
-    this.initializeMap();
+   
     this.initializeTopButton();
     this.initializeVolumeControl();
     this.initializeCopyFunctionality();
     this.initializeListOpen();
+    this.initializeMap();
   }
 
   initializeHeader() {
