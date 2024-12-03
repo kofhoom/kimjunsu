@@ -14,14 +14,16 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'BookkGothic-Lt';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkGothic-Lt.woff2') format('woff2');
+  font-family: "BookkGothic-Lt";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkGothic-Lt.woff2")
+    format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'BookkGothic-Bd';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkGothic-Bd.woff2') format('woff2');
+  font-family: "BookkGothic-Bd";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkGothic-Bd.woff2")
+    format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -36,10 +38,9 @@ body {
   scroll-behavior: smooth;
   width: 100%;
   /* height: 100%; */
-
 }
 .font_weight_bd {
-  font-family: 'BookkGothic-Bd' !important;
+  font-family: "BookkGothic-Bd" !important;
 }
 .header {
   position: fixed;
@@ -102,8 +103,7 @@ a {
   color: #f4cce0;
   font-weight: 600;
   text-align: center;
-  font-family: 'BookkGothic-Bd' !important;
-  
+  font-family: "BookkGothic-Bd" !important;
 }
 /* #f4cce0 */
 .container {
@@ -483,7 +483,7 @@ a {
 /* Top 버튼 스타일 */
 .top-button {
   position: fixed;
-  bottom: 20px;
+  bottom: 60px;
   right: 20px;
   background-color: #fff;
   color: #f4cce0;
@@ -500,6 +500,28 @@ a {
   z-index: 1000;
 }
 
+.top-button2 {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  background-color: #fff;
+  color: #f4cce0;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.top-button2 > img {
+  height: 16px;
+}
 .footer {
   position: relative; /* 기본값: static, 필요 시 fixed로 변경 가능 */
   bottom: 0;
@@ -558,7 +580,7 @@ a {
 
 .font_size15 {
   font-size: 15px !important;
-  font-family: 'BookkGothic-Bd' !important;
+  font-family: "BookkGothic-Bd" !important;
 }
 @keyframes fall {
   0% {

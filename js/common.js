@@ -5,12 +5,13 @@ class WeddingPage {
 
     this.initializeHeader();
     this.initializeGallery();
-   
+
     this.initializeTopButton();
     this.initializeVolumeControl();
     this.initializeCopyFunctionality();
     this.initializeListOpen();
     this.initializeMap();
+    this.initializeSh();
   }
 
   initializeHeader() {
@@ -71,7 +72,35 @@ class WeddingPage {
       }
     );
   }
+  initializeSh() {
+    Kakao.init("0f774301663c4292c86c39ef1a23b00f");
+    const sButton = document.getElementById("kakao-link-btn");
 
+    sButton.addEventListener("click", () => {
+      Kakao.Share.sendDefault({
+        objectType: "feed",
+        content: {
+          title: "준수 ♡ 예나 결혼합니다.",
+          description:
+            "2025년 1월 18일 토요일 오전 11시 여의도 켄싱턴호텔 15층 센트럴파크 웨딩홀",
+          imageUrl: "https://kofhoom.github.io/kimjunsu/image/main_img_1.jpg",
+          link: {
+            mobileWebUrl: "https://kofhoom.github.io/kimjunsu/",
+            webUrl: "https://kofhoom.github.io/kimjunsu/",
+          },
+        },
+        buttons: [
+          {
+            title: "준수 ♡ 예나 결혼합니다.",
+            link: {
+              mobileWebUrl: "https://kofhoom.github.io/kimjunsu/",
+              webUrl: "https://kofhoom.github.io/kimjunsu/",
+            },
+          },
+        ],
+      });
+    });
+  }
   initializeTopButton() {
     const topButton = document.getElementById("top-btn");
     window.addEventListener("scroll", () => {
