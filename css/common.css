@@ -440,7 +440,8 @@ a {
 .relation_list {
   width: 45%;
   text-align: center;
-  font-size: 13.6px;
+  font-size: 12.6px;
+  word-break: keep-all;
 }
 
 .relation_list .parents {
