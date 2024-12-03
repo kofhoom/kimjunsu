@@ -1,12 +1,4 @@
 @font-face {
-  font-family: "DOSGothic";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Pretendard-Regular";
   src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
     format("woff");
@@ -27,11 +19,25 @@
   font-weight: 700;
   font-style: normal;
 }
+
+/* 둥근모꼴 */
+
+/* 도스고딕 */
+
+/* 모노플렉스 */
+@font-face {
+  font-family: "MonoplexKR-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "BookkGothic-Lt";
+  font-family: "MonoplexKR-Regular";
 }
 html,
 body {
@@ -40,7 +46,8 @@ body {
   /* height: 100%; */
 }
 .font_weight_bd {
-  font-family: "BookkGothic-Bd" !important;
+  /* font-family: "BookkGothic-Bd" !important; */
+  font-weight: 600;
 }
 .header {
   position: fixed;
@@ -100,12 +107,12 @@ a {
   text-align: left;
   font-size: 16.875px;
   margin-bottom: 20px;
-  color: #f4cce0;
+  color: #ffcadf;
   font-weight: 600;
   text-align: center;
-  font-family: "BookkGothic-Bd" !important;
+  /* font-family: "BookkGothic-Bd" !important; */
 }
-/* #f4cce0 */
+/* #ffdee8 */
 .container {
   width: 100%;
   /* height: 100%; */
@@ -483,10 +490,10 @@ a {
 /* Top 버튼 스타일 */
 .top-button {
   position: fixed;
-  bottom: 60px;
+  bottom: 102px;
   right: 20px;
   background-color: #fff;
-  color: #f4cce0;
+  color: #ffdee8;
   border: none;
   border-radius: 50%;
   width: 30px;
@@ -502,10 +509,10 @@ a {
 
 .top-button2 {
   position: fixed;
-  bottom: 15px;
+  bottom: 59px;
   right: 20px;
   background-color: #fff;
-  color: #f4cce0;
+  color: #ffdee8;
   border: none;
   border-radius: 50%;
   width: 30px;
@@ -556,7 +563,7 @@ a {
   );
   animation: fall 2s linear infinite;
 }
-.hidden {
+/* .hidden {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -566,7 +573,7 @@ a {
   opacity: 0;
   transform: translateY(-150px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
+} */
 
 .visible {
   opacity: 1;
@@ -580,7 +587,7 @@ a {
 
 .font_size15 {
   font-size: 15px !important;
-  font-family: "BookkGothic-Bd" !important;
+  /* font-family: "BookkGothic-Bd" !important; */
 }
 @keyframes fall {
   0% {
