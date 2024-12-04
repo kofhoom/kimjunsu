@@ -81,23 +81,24 @@ class WeddingPage {
         objectType: "feed",
         content: {
           title: "준수 ♡ 예나 결혼합니다.",
-          description:
-            "2025년 1월 18일 토요일 오전 11시 여의도 켄싱턴호텔 15층 센트럴파크 웨딩홀",
+          description: "2025년 1월 18일 토요일 오전 11시",
           imageUrl: "https://kofhoom.github.io/kimjunsu/image/main_img_1.jpg",
+          imageWidth: 1440,
+          imageHeight: 720,
           link: {
             mobileWebUrl: "https://kofhoom.github.io/kimjunsu/",
             webUrl: "https://kofhoom.github.io/kimjunsu/",
           },
         },
-        buttons: [
-          {
-            title: "준수 ♡ 예나 결혼합니다.",
-            link: {
-              mobileWebUrl: "https://kofhoom.github.io/kimjunsu/",
-              webUrl: "https://kofhoom.github.io/kimjunsu/",
-            },
-          },
-        ],
+        // buttons: [
+        //   {
+        //     title: "준수 ♡ 예나 결혼합니다.",
+        //     link: {
+        //       mobileWebUrl: "https://kofhoom.github.io/kimjunsu/",
+        //       webUrl: "https://kofhoom.github.io/kimjunsu/",
+        //     },
+        //   },
+        // ],
       });
     });
   }
