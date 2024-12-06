@@ -34,7 +34,8 @@
 }
 @font-face {
   font-family: "OnulGitnarae-Regular";
-  src: url("/font/OnulGitnarae-Regular.otf") format("opentype");
+  src: url("https://kofhoom.github.io/kimjunsu/font/OnulGitnarae-Regular.otf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
 }
